@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Book Explorer – Browse, search and save your favourite books."/>
+  <title>Book Explorer – Home</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+
+  <!-- ── TOAST CONTAINER ─────────────────────────────────────────────────── -->
+  <div id="toast-container" aria-live="polite"></div>
+
+  <!-- ── NAVBAR ──────────────────────────────────────────────────────────── -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar-inner">
+
+      <a href="index.html" class="logo" aria-label="Book Explorer home">
+        📚 Book Explorer
+      </a>
+
+      <div class="nav-links" role="menubar">
+        <a href="index.html"     class="nav-link active" role="menuitem">Home</a>
+        <a href="favorites.html" class="nav-link"        role="menuitem">Favorites</a>
+        <a href="about.html"     class="nav-link"        role="menuitem">About</a>
+      </div>
+
+      <div class="nav-right">
+        <button class="theme-btn" id="theme-btn" aria-label="Toggle dark mode">🌙</button>
+        <button class="hamburger" id="menu-btn"  aria-label="Open menu" aria-expanded="false">
+          <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                  d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobile-menu" role="menu">
+    <a href="index.html"     class="nav-link active" role="menuitem">Home</a>
+    <a href="favorites.html" class="nav-link"        role="menuitem">Favorites</a>
+    <a href="about.html"     class="nav-link"        role="menuitem">About</a>
+  </div>
+
+  <!-- ── HERO ────────────────────────────────────────────────────────────── -->
+  <section class="hero" aria-label="Hero section">
+    <div class="hero-badge">✨ Powered by Open Library API</div>
+    <h1>Discover <span>Amazing</span> Books</h1>
+    <p>Search millions of titles, explore new reads, and build your personal favourites collection.</p>
+
+    <div class="search-wrap" role="search">
+      <input
+        type="search"
+        id="search-input"
+        placeholder="Search by title, author, topic…"
+        aria-label="Search books"
+        autocomplete="off"
+      />
+      <button class="btn-primary" id="search-btn" aria-label="Search">
+        <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="8" stroke-width="2.5"/>
+          <path d="M21 21l-4.35-4.35" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        Search
+      </button>
+    </div>
+  </section>
+
+  <!-- ── SECTION HEADER ──────────────────────────────────────────────────── -->
+  <div class="section-header">
+    <h2 id="section-title">🔥 Trending Books</h2>
+    <div class="divider"></div>
+    <span class="result-count" id="result-count"></span>
+  </div>
+
+  <!-- ── BOOK GRID ───────────────────────────────────────────────────────── -->
+  <main id="book-grid" class="book-grid" aria-live="polite" aria-label="Book results"></main>
+
+  <!-- ── FOOTER ──────────────────────────────────────────────────────────── -->
+  <footer>
+    <p>
+      © 2026 Book Explorer &nbsp;·&nbsp;
+      Data from <a href="https://openlibrary.org" target="_blank" rel="noopener">Open Library</a>
+      &nbsp;·&nbsp;
+      <a href="about.html">About</a>
+    </p>
+  </footer>
+
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>

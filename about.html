@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="About the Book Explorer web app."/>
+  <title>Book Explorer – About</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+
+  <!-- ── TOAST CONTAINER ─────────────────────────────────────────────────── -->
+  <div id="toast-container" aria-live="polite"></div>
+
+  <!-- ── NAVBAR ──────────────────────────────────────────────────────────── -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar-inner">
+
+      <a href="index.html" class="logo" aria-label="Book Explorer home">
+        📚 Book Explorer
+      </a>
+
+      <div class="nav-links" role="menubar">
+        <a href="index.html"     class="nav-link"        role="menuitem">Home</a>
+        <a href="favorites.html" class="nav-link"        role="menuitem">Favorites</a>
+        <a href="about.html"     class="nav-link active" role="menuitem">About</a>
+      </div>
+
+      <div class="nav-right">
+        <button class="theme-btn" id="theme-btn" aria-label="Toggle dark mode">🌙</button>
+        <button class="hamburger" id="menu-btn"  aria-label="Open menu" aria-expanded="false">
+          <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                  d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobile-menu" role="menu">
+    <a href="index.html"     class="nav-link"        role="menuitem">Home</a>
+    <a href="favorites.html" class="nav-link"        role="menuitem">Favorites</a>
+    <a href="about.html"     class="nav-link active" role="menuitem">About</a>
+  </div>
+
+  <!-- ── PAGE HEADER ─────────────────────────────────────────────────────── -->
+  <div class="page-header">
+    <h1>About <span>Book Explorer</span></h1>
+    <p>A modern, responsive book browsing web app</p>
+  </div>
+
+  <!-- ── CONTENT ─────────────────────────────────────────────────────────── -->
+  <div class="about-wrap">
+
+    <!-- What is it -->
+    <div class="about-card">
+      <h2>📖 What is Book Explorer?</h2>
+      <p>
+        <strong>Book Explorer</strong> is a fully responsive, multi-page web application that lets
+        you search and discover books using the free
+        <a href="https://openlibrary.org" target="_blank" rel="noopener">Open Library API</a>
+        — a catalogue of millions of titles.
+      </p>
+      <p>
+        Search for any title, author, or topic. Save the books you love to your personal
+        Favourites list. Your favourites are stored in your browser's
+        <code>localStorage</code>, so they persist between sessions with no account needed.
+      </p>
+      <p>
+        Built as part of a front-end development lab series covering responsive layouts,
+        DOM interactivity, ES6 modules, async JavaScript, and API integration.
+      </p>
+    </div>
+
+    <!-- Tech stack -->
+    <div class="about-card">
+      <h3>🛠 Tech Stack</h3>
+      <div class="tech-grid">
+        <div class="tech-item">🌐 HTML5</div>
+        <div class="tech-item">🎨 CSS3</div>
+        <div class="tech-item">⚡ Vanilla JS</div>
+        <div class="tech-item">📦 ES6 Modules</div>
+        <div class="tech-item">📚 Open Library API</div>
+        <div class="tech-item">💾 localStorage</div>
+        <div class="tech-item">🔤 Google Fonts</div>
+        <div class="tech-item">🌙 Dark Mode</div>
+      </div>
+    </div>
+
+    <!-- Features -->
+    <div class="about-card">
+      <h3>✦ Features</h3>
+      <ul class="feature-list">
+        <li>Search millions of books via the Open Library API</li>
+        <li>Responsive grid — 1 col mobile → 2–3 tablet → 4 desktop</li>
+        <li>Add / remove favourite books with one click</li>
+        <li>Favourites persist across page refreshes via localStorage</li>
+        <li>Toast notifications on add / remove</li>
+        <li>Dark mode toggle — preference saved between sessions</li>
+        <li>Loading spinner and "No results" feedback</li>
+        <li>Sticky frosted-glass navbar</li>
+        <li>Responsive mobile hamburger menu</li>
+        <li>XSS-safe HTML rendering</li>
+      </ul>
+    </div>
+
+    <!-- Project structure -->
+    <div class="about-card">
+      <h3>📁 Project Structure</h3>
+      <pre style="background:var(--accent-light);color:var(--accent);padding:1.25rem;border-radius:10px;font-size:0.82rem;line-height:1.8;overflow-x:auto;">book-explorer/
+├── index.html          ← Homepage
+├── favorites.html      ← Favourites page
+├── about.html          ← About page
+├── css/
+│   └── style.css       ← All styles (CSS variables, dark mode)
+├── js/
+│   ├── app.js          ← Homepage entry point
+│   ├── fetchBooks.js   ← Open Library API module
+│   ├── favorites.js    ← Add / remove / check favourites
+│   ├── ui.js           ← Reusable render functions + toasts
+│   └── storage.js      ← localStorage helpers
+└── assets/
+    └── placeholder.jpg ← Fallback cover image</pre>
+    </div>
+
+    <!-- GitHub workflow -->
+    <div class="about-card">
+      <h3>🐙 GitHub Workflow Simulation</h3>
+
+      <p><strong style="color:var(--text)">Suggested branches:</strong></p>
+      <div class="branch-list">
+        <span class="branch-tag">main</span>
+        <span class="branch-tag">feature/search</span>
+        <span class="branch-tag">feature/favorites</span>
+        <span class="branch-tag">feature/ui</span>
+        <span class="branch-tag">feature/dark-mode</span>
+        <span class="branch-tag">fix/api-error-handling</span>
+      </div>
+
+      <p><strong style="color:var(--text)">Example Issues:</strong></p>
+      <ul class="issue-list">
+        <li>Implement search bar with live API integration</li>
+        <li>Add localStorage persistence for favourites</li>
+        <li>Build responsive book card grid</li>
+        <li>Add dark mode toggle with saved preference</li>
+        <li>Show loading spinner during API fetch</li>
+        <li>Handle empty search results gracefully</li>
+        <li>Add toast notifications for user feedback</li>
+      </ul>
+
+      <br/>
+      <p><strong style="color:var(--text)">Example PR description:</strong></p>
+      <pre style="background:var(--accent-light);color:var(--text-muted);padding:1rem;border-radius:10px;font-size:0.82rem;line-height:1.7;overflow-x:auto;">## feat: Add search functionality
+
+### Summary
+Implements real-time book search using the Open Library API.
+
+### Changes
+- Added fetchBooks.js module with async/await
+- Wired search input + button to displayBooks()
+- Added loading spinner and error/empty states
+- Encoded query params to prevent injection
+
+### Testing
+- Searched "harry potter" → 12 results shown
+- Searched gibberish → "No results" message shown
+- Disconnected network → error message shown</pre>
+    </div>
+
+    <!-- How to run -->
+    <div class="about-card">
+      <h3>🚀 How to Run Locally</h3>
+      <p>Because the app uses ES6 modules and fetches from an external API, you need a local HTTP server (not <code>file://</code>).</p>
+      <pre style="background:var(--accent-light);color:var(--accent);padding:1.25rem;border-radius:10px;font-size:0.85rem;line-height:1.9;overflow-x:auto;"># Option 1 — Node.js (npx)
+npx serve .
+
+# Option 2 — Python
+python -m http.server 8080
+
+# Option 3 — VS Code
+Install the "Live Server" extension, then
+right-click index.html → Open with Live Server</pre>
+      <p>Then open <code>http://localhost:3000</code> (or the port shown) in your browser.</p>
+    </div>
+
+  </div>
+
+  <!-- ── FOOTER ──────────────────────────────────────────────────────────── -->
+  <footer>
+    <p>
+      © 2026 Book Explorer &nbsp;·&nbsp;
+      Data from <a href="https://openlibrary.org" target="_blank" rel="noopener">Open Library</a>
+    </p>
+  </footer>
+
+  <script>
+    // Theme
+    const themeBtn = document.getElementById('theme-btn');
+    const THEME_KEY = 'be_theme';
+    function applyTheme(t) {
+      document.documentElement.setAttribute('data-theme', t);
+      localStorage.setItem(THEME_KEY, t);
+      themeBtn.textContent = t === 'dark' ? '☀️' : '🌙';
+    }
+    applyTheme(localStorage.getItem(THEME_KEY) || 'light');
+    themeBtn.addEventListener('click', () =>
+      applyTheme(document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark')
+    );
+
+    // Mobile menu
+    document.getElementById('menu-btn').addEventListener('click', () =>
+      document.getElementById('mobile-menu').classList.toggle('open')
+    );
+  </script>
+</body>
+</html>
