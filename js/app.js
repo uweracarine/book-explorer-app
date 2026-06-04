@@ -53,10 +53,7 @@ mobileMenu.querySelectorAll('.nav-link').forEach(link => {
 
 // ── Book rendering ────────────────────────────────────────────────────────
 
-/**
- * Fetch and display books for a given query.
- * @param {string} query
- */
+
 async function displayBooks(query) {
   // Update section heading
   sectionTitle.textContent = query
